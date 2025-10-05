@@ -27,8 +27,9 @@ export default function App () {
 
   return (
     <div style={{padding:20, textAlign: "center"}}>
-      <h1>Simple To-Do App</h1>
+      <h1 style={{marginBottom: 20}}>Simple To-Do App</h1>
       <TodoInput onAdd={addTodo}/>
+      <hr style={{margin:"20px 0"}} />
       <TodoList todos={todos} onToggle={toggleTodo} onDelete={deleteTodo} />
     </div>
   );

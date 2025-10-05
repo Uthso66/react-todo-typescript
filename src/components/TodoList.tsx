@@ -13,7 +13,11 @@ onDelete: (id: number) => void;
 export default function TodoList({ todos, onToggle, onDelete }: TodoListProps) {
 if (todos.length === 0) {
 
-return <p>No tasks yet — add your first task!</p>;
+return (
+    <p style={{marginTop: 20, fontStyle: "italic", color:"gray"}}>
+        No tasks yet — add your first task!
+    </p>
+);
 }
 
 
