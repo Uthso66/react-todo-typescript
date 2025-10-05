@@ -18,17 +18,26 @@ export default function TodoInput({ onAdd } : TodoInputProps) {
     };
 
     return (
-        <form onSubmit={handleSubmit} aria-label="Add todo form">
-            <label htmlFor="new-todo" style={{marginRight: 10}}> Add task</label>
-            <input 
-            id="new-todo"
-            type="text"
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-            placeholder="e.g Buy Milk"
-            autoComplete="off"
-            />
-            <button type="submit" style={{marginLeft: 10}}>Add</button>
-        </form>
+        <form onSubmit={handleSubmit} className="flex items-center gap-2">
+  <label htmlFor="new-todo" className="text-gray-700 font-medium">
+    Add task
+  </label>
+  <input
+    id="new-todo"
+    type="text"
+    value={value}
+    onChange={(e) => setValue(e.target.value)}
+    placeholder="e.g. Buy Milk"
+    autoComplete="off"
+    className="flex-grow border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+  />
+  <button
+    type="submit"
+    className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+  >
+    Add
+  </button>
+</form>
+
     );
 }

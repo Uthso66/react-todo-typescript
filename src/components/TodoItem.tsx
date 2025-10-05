@@ -9,20 +9,26 @@ type TodoItemProps = {
 export default function TodoItem ({todo, onToggle, onDelete} : TodoItemProps) {
 
     return (
-        <li style={{display: "flex", gap: 8, alignItems:"center", textAlign: "center", marginLeft: 180}}>
-            <input type="checkbox" 
-            checked={todo.completed}
-            onChange={() => onToggle(todo.id)}
-            aria-label={`Mark ${todo.text} as ${todo.completed ? "incomplete" : "complete"}`}
-            />
+        <li className="flex items-center justify-between bg-gray-50 p-3 rounded-lg shadow-sm">
+  <div className="flex items-center gap-3">
+    <input
+      type="checkbox"
+      checked={todo.completed}
+      onChange={() => onToggle(todo.id)}
+      className="h-5 w-5 accent-blue-600"
+    />
+    <span className={`${todo.completed ? "line-through text-gray-500" : ""}`}>
+      {todo.text}
+    </span>
+  </div>
 
-            <span style={{textDecoration: todo.completed ? "line-through": "none"}}>
-                {todo.text}
-            </span>
+  <button
+    onClick={() => onDelete(todo.id)}
+    className="text-red-500 hover:text-red-700 font-semibold"
+  >
+    Delete
+  </button>
+</li>
 
-            <button style={{marginBottom: 2}} onClick={() => onDelete(todo.id)} aria-label={`Delete ${todo.text}`}>
-            Delete    
-            </button>
-        </li>
     );
 }

@@ -11,20 +11,19 @@ onDelete: (id: number) => void;
 
 export default function TodoList({ todos, onToggle, onDelete }: TodoListProps) {
 if (todos.length === 0) {
-
-return (
-    <p style={{marginTop: 20, fontStyle: "italic", color:"gray"}}>
-        No tasks yet — add your first task!
+  return (
+    <p className="text-gray-500 italic text-center mt-3">
+      No tasks yet — add your first task!
     </p>
-);
+  );
 }
 
-
 return (
-<ul>
-{todos.map((t) => (
-<TodoItem key={t.id} todo={t} onToggle={onToggle} onDelete={onDelete} />
-))}
-</ul>
+  <ul className="space-y-3">
+    {todos.map((t) => (
+      <TodoItem key={t.id} todo={t} onToggle={onToggle} onDelete={onDelete} />
+    ))}
+  </ul>
 );
+
 }
