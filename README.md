@@ -3,8 +3,6 @@
 A clean, responsive to-do list application built with **React**, **TypeScript**, and **Tailwind CSS**.  
 Features local storage persistence, smooth UI interactions, and modern responsive design — perfect for portfolio demonstration.
 
-![App Preview](./public/main.png)
-
 ---
 
 ## 🚀 Live Demo
@@ -111,13 +109,12 @@ The production build will be created in the `dist/` directory.
 
 ## 📸 Screenshots
 
-```markdown
-![HomePage](./public/main.png)
-![SingleElementAdd](./public/add-signle_element)
-![MultipleElementAdd](./public/add-multiple-element)
-![CompletedElement](./public/completed-todo)
-![DeletedElement](./public/delete-item)
-![ClearCompletedElement](./public/clear-completed)
+![HomePage](public/main.png)
+![SingleElementAdd](public/add-signle_element)
+![MultipleElementAdd](public/add-multiple-element)
+![CompletedElement](public/completed-todo)
+![DeletedElement](public/delete-item)
+![ClearCompletedElement](public/clear-completed)
 ```
 
 ---
