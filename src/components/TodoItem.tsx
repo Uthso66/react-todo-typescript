@@ -9,7 +9,7 @@ type TodoItemProps = {
 export default function TodoItem ({todo, onToggle, onDelete} : TodoItemProps) {
 
     return (
-        <li className="flex items-center justify-between bg-gray-50 p-3 rounded-lg shadow-sm">
+        <li className="flex items-center justify-between bg-gray-800 p-3 rounded-lg shadow-sm">
   <div className="flex items-center gap-3">
     <input
       type="checkbox"
@@ -17,7 +17,7 @@ export default function TodoItem ({todo, onToggle, onDelete} : TodoItemProps) {
       onChange={() => onToggle(todo.id)}
       className="h-5 w-5 accent-blue-600"
     />
-    <span className={`${todo.completed ? "line-through text-gray-500" : ""}`}>
+    <span className={`${todo.completed ? "line-through text-red-500" : ""}`}>
       {todo.text}
     </span>
   </div>
