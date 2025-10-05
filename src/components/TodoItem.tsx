@@ -1,34 +1,37 @@
 import type { Todo } from "../types/Todo";
 
 type TodoItemProps = {
-    todo: Todo;
-    onToggle:(id: number) => void;
-    onDelete: (id: number) => void;
+  todo: Todo;
+  onToggle: (id: number) => void;
+  onDelete: (id: number) => void;
 };
 
-export default function TodoItem ({todo, onToggle, onDelete} : TodoItemProps) {
-
-    return (
-        <li className="flex items-center justify-between bg-gray-800 p-3 rounded-lg shadow-sm">
-  <div className="flex items-center gap-3">
-    <input
-      type="checkbox"
-      checked={todo.completed}
-      onChange={() => onToggle(todo.id)}
-      className="h-5 w-5 accent-blue-600"
-    />
-    <span className={`${todo.completed ? "line-through text-red-500" : ""}`}>
-      {todo.text}
-    </span>
-  </div>
-
-  <button
-    onClick={() => onDelete(todo.id)}
-    className="text-red-500 hover:text-red-700 font-semibold"
-  >
-    Delete
-  </button>
-</li>
-
-    );
+export default function TodoItem({ todo, onToggle, onDelete }: TodoItemProps) {
+  return (
+    <li className="flex items-center justify-between bg-gray-100 rounded-lg px-3 py-2 mb-2 hover:bg-gray-200 transition">
+      <div className="flex items-center gap-2">
+        <input
+          type="checkbox"
+          checked={todo.completed}
+          onChange={() => onToggle(todo.id)}
+          className="cursor-pointer"
+        />
+        <span
+          className={`${
+            todo.completed
+              ? "line-through text-gray-500"
+              : "text-gray-800 font-medium"
+          }`}
+        >
+          {todo.text}
+        </span>
+      </div>
+      <button
+        onClick={() => onDelete(todo.id)}
+        className="text-red-500 hover:text-red-700 transition"
+      >
+        ✕
+      </button>
+    </li>
+  );
 }

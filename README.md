@@ -1,67 +1,133 @@
-# To-Do App (React + TypeScript)
+# 📝 Simple To-Do App (React + TypeScript + Tailwind)
 
-A simple and elegant to-do application built with React and TypeScript.
+A clean, responsive to-do list application built with **React**, **TypeScript**, and **Tailwind CSS**.  
+Features local storage persistence, smooth UI interactions, and modern responsive design — perfect for portfolio demonstration.
 
-## Features
+![App Preview](./screenshot.png)
 
-- ✅ Add new tasks
-- ✅ Mark tasks as complete/incomplete
-- ✅ Delete tasks
-- ✅ Clean, responsive UI
-- ✅ Type-safe with TypeScript
+---
 
-## Tech Stack
+## 🚀 Live Demo
+🔗 **[View on Vercel](https://todo-app-yourname.vercel.app)**  
+*(Replace with your actual deployed link)*
 
-- **Frontend**: React 18 + TypeScript
-- **Build Tool**: Vite
-- **Styling**: CSS/Tailwind CSS (to be implemented)
+---
 
-## Quick Start
+## ✨ Features
+
+- ✅ Add new tasks instantly  
+- ✅ Toggle task completion (with strikethrough effect)  
+- ✅ Delete individual tasks  
+- ✅ Clear all completed tasks  
+- ✅ LocalStorage persistence (data survives refresh)  
+- ✅ Responsive design with Tailwind CSS  
+- ✅ Type-safe components using TypeScript  
+
+---
+
+## 🧠 Tech Stack
+
+| Category | Technology |
+|-----------|-------------|
+| **Frontend Framework** | React 18 |
+| **Language** | TypeScript |
+| **Build Tool** | Vite |
+| **Styling** | Tailwind CSS |
+| **State Management** | React Hooks (useState, useEffect) |
+| **Deployment** | Vercel |
+
+---
+
+## ⚙️ Installation & Setup
 
 ### Prerequisites
-- Node.js (version 14 or higher)
-- npm or yarn
+- Node.js ≥ 16  
+- npm (or yarn/pnpm)
 
-### Installation
+### Steps
+```bash
+# 1️⃣ Clone repository
+git clone https://github.com/yourusername/react-todo-typescript.git
+cd react-todo-typescript
 
-1. **Clone and setup**:
-   ```bash
-   npm create vite@latest todo-app -- --template react-ts
-   cd todo-app
-   npm install
-   ```
+# 2️⃣ Install dependencies
+npm install
 
-2. **Run the development server**:
-   ```bash
-   npm run dev
-   ```
+# 3️⃣ Start development server
+npm run dev
+````
 
-3. **Open your browser**:
-   Navigate to `http://localhost:5173` to view the app.
+Then open **[http://localhost:5173](http://localhost:5173)** in your browser.
 
-### Available Scripts
+---
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-
-## Project Structure
+## 📂 Project Structure
 
 ```
 src/
-├── components/     # React components
-├── types/         # TypeScript type definitions
-├── App.tsx        # Main application component
-└── main.tsx       # Application entry point
+├── components/
+│   ├── TodoInput.tsx      # Input field + Add button
+│   ├── TodoList.tsx       # Renders todo items
+│   ├── TodoItem.tsx       # Individual task component
+│   └── TodoFooter.tsx     # Clear completed + task counter
+│
+├── types/
+│   └── Todo.ts            # Type definitions
+│
+├── App.tsx                # Root component with localStorage logic
+└── main.tsx               # Application entry point
 ```
 
-## Next Steps
+---
 
-- [ ] Implement full CRUD functionality
-- [ ] Add Tailwind CSS for styling
-- [ ] Polish UI for portfolio presentation
-- [ ] Add local storage persistence
+## 🪄 Design Philosophy
 
-## License
+* **Minimalist UX** — no clutter, just productivity
+* **Color harmony** — dark background + white cards for contrast
+* **Accessible** — keyboard-friendly, focus states, semantic structure
+* **Lightweight** — no external state libraries or unnecessary deps
 
-MIT
+---
+
+## 📦 Build for Production
+
+```bash
+npm run build
+npm run preview
+```
+
+The production build will be created in the `dist/` directory.
+
+---
+
+## 🌍 Deployment (Vercel)
+
+1. Push your code to a public GitHub repository.
+2. Go to [vercel.com](https://vercel.com) → **New Project** → Import your repo.
+3. Build command: `npm run build`
+   Output directory: `dist`
+4. Click **Deploy** 🚀
+
+---
+
+## 📸 Screenshots
+
+```markdown
+![Responsive View](./screenshots/mobile-view.png)
+```
+
+---
+
+## 🧾 License
+
+This project is licensed under the **MIT License** — feel free to use, modify, and share.
+
+---
+
+## 👤 Author
+
+**Md. Tarikul Islam (Uthso)**
+Software QA Engineer | Security Enthusiast | AI/ML Learner
+📧 [[tarikulislam.uthso.3966@gmail.com](mailto:tarikulislam.uthso.3966@gmail.com)]
+🔗 [LinkedIn](https://www.linkedin.com/in/tarikul-islam-uthso/) | [GitHub](https://github.com/Uthso66)
+

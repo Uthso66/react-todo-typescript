@@ -1,54 +1,40 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 
-interface TodoInputProps {
-  onAdd: (text: string) => void;
-}
+type TodoInputProps = { onAdd: (text: string) => void };
 
-const TodoInput: React.FC<TodoInputProps> = ({ onAdd }) => {
-  
-  const [text, setText] = useState("");
-
-  
+export default function TodoInput({ onAdd }: TodoInputProps) {
+  const [value, setValue] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
-
-  
-  useEffect(() => {
-    inputRef.current?.focus();
-  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const trimmed = text.trim();
-
+    const trimmed = value.trim();
     if (!trimmed) return;
-
-    
     onAdd(trimmed);
-
-    
-    setText("");
-
-    
+    setValue("");
     inputRef.current?.focus();
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex gap-2 items-center p-4 bg-gray-900 rounded-xl shadow-md">
+    <form
+      onSubmit={handleSubmit}
+      className="flex gap-2 items-center justify-center"
+      aria-label="Add todo form"
+    >
       <input
-        ref={inputRef} 
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-        placeholder="Add a new task..."
-        className="flex-1 p-2 rounded-md bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        ref={inputRef}
+        type="text"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        placeholder="Add a task..."
+        className="flex-1 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
       />
       <button
         type="submit"
-        className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-md text-white font-semibold transition"
+        className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
       >
         Add
       </button>
     </form>
   );
-};
-
-export default TodoInput;
+}
