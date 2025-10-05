@@ -110,11 +110,11 @@ The production build will be created in the `dist/` directory.
 ## 📸 Screenshots
 
 ![HomePage](public/main.png)
-![SingleElementAdd](public/add-signle_element)
-![MultipleElementAdd](public/add-multiple-element)
-![CompletedElement](public/completed-todo)
-![DeletedElement](public/delete-item)
-![ClearCompletedElement](public/clear-completed)
+![SingleElementAdd](public/add_signle_element.png)
+![MultipleElementAdd](public/add_multiple_element)
+![CompletedElement](public/completed_todo.png)
+![DeletedElement](public/delete_item.png)
+![ClearCompletedElement](public/clear_completed.png)
 ```
 
 ---
