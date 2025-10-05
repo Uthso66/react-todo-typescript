@@ -1,4 +1,3 @@
-```markdown
 # To-Do App (React + TypeScript)
 
 A simple and elegant to-do application built with React and TypeScript.
