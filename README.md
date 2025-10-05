@@ -3,13 +3,12 @@
 A clean, responsive to-do list application built with **React**, **TypeScript**, and **Tailwind CSS**.  
 Features local storage persistence, smooth UI interactions, and modern responsive design — perfect for portfolio demonstration.
 
-![App Preview](./screenshot.png)
+![App Preview](./public/main.png)
 
 ---
 
 ## 🚀 Live Demo
-🔗 **[View on Vercel](https://todo-app-yourname.vercel.app)**  
-*(Replace with your actual deployed link)*
+🔗 **[View on Vercel](https://react-todo-typescript-plum.vercel.app/)**  
 
 ---
 
@@ -47,7 +46,7 @@ Features local storage persistence, smooth UI interactions, and modern responsiv
 ### Steps
 ```bash
 # 1️⃣ Clone repository
-git clone https://github.com/yourusername/react-todo-typescript.git
+git clone https://github.com/Uthso66/react-todo-typescript
 cd react-todo-typescript
 
 # 2️⃣ Install dependencies
@@ -113,7 +112,12 @@ The production build will be created in the `dist/` directory.
 ## 📸 Screenshots
 
 ```markdown
-![Responsive View](./screenshots/mobile-view.png)
+![HomePage](./public/main.png)
+![SingleElementAdd](./public/add-signle_element)
+![MultipleElementAdd](./public/add-multiple-element)
+![CompletedElement](./public/completed-todo)
+![DeletedElement](./public/delete-item)
+![ClearCompletedElement](./public/clear-completed)
 ```
 
 ---
