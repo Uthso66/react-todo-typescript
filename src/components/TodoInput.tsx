@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import type { Todo } from "../types/Todo";
 
 type TodoInputProps = {
     onAdd: (text : string) => void;
